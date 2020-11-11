@@ -1,14 +1,14 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-const Simple = lazy(() => import('@components/simple'));
+import { ROUTE_URLS } from '@routes/index';
 
-export const Main = () => {
-  return (
-    <Suspense fallback={<div>Wczytywanie...</div>}>
-      <Switch>
-        <Route exact={true} path={'/'} component={Simple} />
-      </Switch>
-    </Suspense>
-  );
-};
+const RocketGrapqhl = lazy(() => import('@components/rocket-grapqhl'));
+
+export const Main = () => (
+  <Suspense fallback={<div>Wczytywanie...</div>}>
+    <Switch>
+      <Route exact={true} path={ROUTE_URLS.Main} component={RocketGrapqhl} />
+    </Switch>
+  </Suspense>
+);

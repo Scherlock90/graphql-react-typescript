@@ -1,7 +1,3 @@
-const Menu = Object.freeze({
-  main: '/',
+export const ROUTE_URLS = Object.freeze({
+  Main: '/',
 });
-
-export const ROUTE_URLS = {
-  Menu,
-};
