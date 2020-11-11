@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { useAsyncEffect } from 'use-async-effect';
 
 import ThumbRocketData from './thumb-rocket-data';
 
@@ -16,10 +15,10 @@ const RocketGrapqhl = () => {
 
   const updatedData = () => setDataFromQuery(data);
 
-  useAsyncEffect(async () => {
+  useEffect(() => {
     updatedData();
 
-    return async () => updatedData();
+    return () => updatedData();
   }, [data, loading]);
 
   if (loading) return <p>Loading ...</p>;
