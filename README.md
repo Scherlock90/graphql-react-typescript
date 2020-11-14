@@ -40,4 +40,8 @@ https://www.npmjs.com/package/node-prune
 install this package global on your computer and when you are add new pacakges then please use this, because this clean/remove not nesseary packages and bundle is a less size
 
 1. npm install -g node-prune
-2. use script postinstall
+2. use script postinstall'
+
+## TRy this command to search pacakges 
+
+du -sh ./node_modules/* | sort -nr | grep '\dM.*'
