@@ -42,6 +42,7 @@ install this package global on your computer and when you are add new pacakges t
 1. npm install -g node-prune
 2. use script postinstall'
 
-## TRy this command to search pacakges 
+## TRY THIS COMMAND TO SEARCH PACKAGES 
 
-du -sh ./node_modules/* | sort -nr | grep '\dM.*'
+du -sh ./node_modules/* | sort -nr | grep '\dM.*'  -> linux or os
+find ./node_modules/* -printf '%s %p\n'|sort -nr|head -> windows
